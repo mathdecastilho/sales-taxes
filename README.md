@@ -205,12 +205,17 @@ npm test
 
 ### Run tests in watch mode (re-runs when files change):
 ```bash
-npm test -- --watch
+npm run test:watch
 ```
 
 ### Run tests with coverage:
 ```bash
-npm test -- --coverage
+npm run test:coverage
+```
+
+### Generate and open coverage report:
+```bash
+npm run coverage
 ```
 
 ### Run specific tests:
@@ -221,6 +226,23 @@ npm test -- index.test.js
 # Run only tests containing "Case 1" in the description
 npm test -- --testNamePattern="Case 1"
 ```
+
+## Code Coverage
+
+This project includes comprehensive code coverage reporting with the following features:
+
+### Coverage Configuration
+- **Target**: 80% coverage threshold for branches, functions, lines, and statements
+- **Reports**: Multiple formats including HTML, LCOV, JSON, and console output
+- **Coverage Directory**: `coverage/` (automatically generated)
+
+### Coverage Reports
+- **HTML Report**: Interactive coverage report at `coverage/lcov-report/index.html`
+- **Console**: Summary displayed in terminal after running tests
+- **LCOV**: Standard format for integration with CI/CD tools
+
+### Current Coverage Status
+The project maintains 100% code coverage across all source files in the `lib/` directory.
 
 ### Test Structure
 

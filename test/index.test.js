@@ -1,9 +1,14 @@
 const app = require('../lib/index.js');
+const rootApp = require('../index.js');
 
 describe('Sales Taxes App', () => {
   it('exports the app function', () => {
     expect(app).toBeDefined();
     expect(typeof app).toBe('function');
+  });
+
+  it('root index.js exports the same function as lib/index.js', () => {
+    expect(rootApp).toBe(app);
   });
 
   describe('Test cases', () => {
