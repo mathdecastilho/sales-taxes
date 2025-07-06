@@ -13,29 +13,75 @@ A sales tax calculator that computes basic and import taxes on items, applying s
 
 ## Setup
 
-### Node.js Installation using NVM
+### Node.js Installation
+
+You can install Node.js using either NVM (recommended for development) or directly on your system.
+
+#### Option 1: Using NVM (Recommended)
 
 1. Install NVM (Node Version Manager) if you don't have it:
-```bash
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
-```
+   Visit the official NVM repository for installation instructions: https://github.com/nvm-sh/nvm
 
-2. Restart your terminal or run:
+2. Install and use the specific Node.js version required by this project:
 ```bash
-source ~/.zshrc
-```
-
-3. Install and use the latest version of Node.js:
-```bash
-nvm install node
-nvm use node
+nvm install 22.17
+nvm use 22.17
 ```
 
 4. Verify the installation was successful:
 ```bash
-node --version
+node --version  # Should show v22.17.0
 npm --version
 ```
+
+**Note:** The project includes a `.nvmrc` file, so you can also simply run `nvm use` in the project directory to automatically switch to the correct version.
+
+#### Option 2: Direct Installation on Mac/Linux
+
+**On macOS:**
+```bash
+# Using Homebrew (install Homebrew first if you don't have it)
+# Install Node.js version 22.17
+brew install node@22
+
+# Or download Node.js v22.17 from official website
+# Visit https://nodejs.org and download the specific version
+```
+
+**On Linux (Ubuntu/Debian):**
+```bash
+# Update package index
+sudo apt update
+
+# Install Node.js 22.x repository
+curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
+
+# Install Node.js and npm
+sudo apt install nodejs
+
+# Verify installation
+node --version  # Should show v22.17.0 or similar
+npm --version
+```
+
+**On Linux (CentOS/RHEL/Fedora):**
+```bash
+# Add Node.js 22.x repository
+curl -fsSL https://rpm.nodesource.com/setup_22.x | sudo bash -
+
+# Install Node.js and npm
+sudo yum install nodejs  # For CentOS/RHEL
+# sudo dnf install nodejs  # For Fedora
+
+# Verify installation
+node --version  # Should show v22.17.0 or similar
+npm --version
+```
+
+**On any other platform, follow the official website:** https://nodejs.org/en/download
+
+
+**Note:** This project requires Node.js version 22.17 as specified in the `.nvmrc` file.
 
 ### Project Dependencies Installation
 
