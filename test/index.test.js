@@ -55,4 +55,16 @@ Total: 98.38`;
       });
     });
   });
+
+  describe('Imported but is a basic tax free item', () => {
+    const input = `3 imported boxes of chocolates at 11.25`;
+    const output = `3 imported boxes of chocolates: 35.55
+Sales Taxes: 1.80
+Total: 35.55`;
+
+    it('calculates the taxes as expected', () => {
+      const result = app(input);
+      expect(result).toBe(output);
+    });
+  });
 });
